@@ -10,21 +10,21 @@ pipeline {
         }
         stage('Build') {
             steps {
-                dir('D:\mavenpro\maven') {
+                dir('D:/mavenpro/maven') {
                     bat 'mvn clean compile package'
                 }
             }
         }
         stage('Test') {
             steps {
-                dir('D:\mavenpro\maven') {
+                dir('D:/mavenpro/maven') {
                     bat 'mvn test'
                 }
             }
         }
         stage('Run') {
             steps {
-                dir('D:\mavenpro\maven') {
+                dir('D:/mavenpro/maven') {
                     bat 'java -cp target/classes com.devops.examples.App'
                 }
             }
